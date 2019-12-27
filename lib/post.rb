@@ -7,7 +7,6 @@ class Post
  
   def initialize(title)
     @title = title 
-    @posts << self.new
     save
   end
  
@@ -21,6 +20,6 @@ class Post
   
  
   def author_name
-    self.author.name
+    if self.author.name
   end
 end
