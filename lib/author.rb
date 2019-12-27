@@ -17,7 +17,7 @@ attr_accessor :name, :posts
   end
   
   def posts 
-    @posts << Post.new.name
+    Post.all.select {
     
       # binding.pry
       
