@@ -17,7 +17,7 @@ attr_accessor :name, :posts
   end
   
   def posts 
-    Post.all.select {
+    Post.all.select {|post| 
     
       # binding.pry
       
