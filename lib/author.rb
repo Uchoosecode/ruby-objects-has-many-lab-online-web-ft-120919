@@ -11,14 +11,14 @@ attr_accessor :name, :posts
     @posts = []
   end
   
-  def add_post(title)
-    @posts << title
-    title.author = self
-  end
-  
   def posts 
     Post.all.select {|post| post.author == self}
     
+  end
+  
+  def add_post(title)
+    @posts << title
+    title.author = self
   end
   
   
