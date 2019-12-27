@@ -19,9 +19,6 @@ attr_accessor :name, :posts
   def posts 
     Post.all.select {|post| post.author == self}
     
-      # binding.pry
-      
-      # puts "The #{self.author}"
   end
   
   
