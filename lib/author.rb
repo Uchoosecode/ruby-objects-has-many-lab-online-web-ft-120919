@@ -28,9 +28,9 @@ attr_accessor :name, :posts
     title.author = self
   end
   
-  # def self.song_count
-  # Post.all.count 
-  # end
+  def self.song_count
+  Post.all.count 
+  end
   
   
 end
