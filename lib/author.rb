@@ -17,7 +17,7 @@ attr_accessor :name, :posts
   end
   
   def posts 
-    @posts << self.new.posts
+    @posts << Post.new.name
     
       # binding.pry
       
