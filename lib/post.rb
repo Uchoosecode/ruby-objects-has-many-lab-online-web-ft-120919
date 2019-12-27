@@ -8,11 +8,12 @@ class Post
   def initialize(title)
     @title = title 
     @posts << self.new
+    save
   end
  
-  # def save
-  #   @@all << self
-  # end
+  def save
+    @@all << self
+  end
  
   def self.all
     @@all
