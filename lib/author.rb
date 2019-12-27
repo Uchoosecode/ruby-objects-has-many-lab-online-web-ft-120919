@@ -11,29 +11,26 @@ attr_accessor :name, :posts
     @posts = []
   end
   
+  def posts 
+    Post.all.select {|post| post.author == self}
+    
+  end
+  
   def add_post(title)
     @posts << title
     title.author = self
   end
   
-  def posts 
-    @posts << self.new.posts
-    
-      # binding.pry
-      
-      # puts "The #{self.author}"
+  
+  def add_post_by_title(title)
+    title = Post.new(title)
+    @posts << title
+    title.author = self
   end
   
-  
-  # def add_post_by_name(title)
-  #   titles = Post.new(title)
-  #   @posts << title
-  #   title.author = self
-  # end
-  
-  # def self.song_count
-  # Post.all.count 
-  # end
+  def self.post_count
+  Post.all.count 
+  end
   
   
 end
