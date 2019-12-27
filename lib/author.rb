@@ -25,11 +25,11 @@ attr_accessor :name, :posts
   end
   
   
-  # def add_post_by_name(title)
-  #   titles = Post.new(title)
-  #   @posts << title
-  #   title.author = self
-  # end
+  def add_post_by_title(title)
+    titles = Post.new(title)
+    @posts << title
+    title.author = self
+  end
   
   # def self.song_count
   # Post.all.count 
